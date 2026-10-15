@@ -1,18 +1,17 @@
 {
   "name": "zihao-skills",
   "owner": { "name": "Zihao Feng" },
-  "metadata": { "description": "Wraps upstream skill repos that don't ship their own marketplace" },
+  "metadata": { "description": "Mirrors of upstream skill repos that don't ship their own marketplace" },
   "plugins": [
     {
       "name": "apple-design",
       "description": "Emil Kowalski's apple-design skill",
-      "source": { "source": "git-subdir", "url": "emilkowalski/skills", "path": "skills/apple-design" }
+      "source": "./plugins/apple-design"
     },
     {
       "name": "nature-figure",
-      "description": "Nature Skills: manuscript figures (nature-shared files bundled alongside)",
-      "source": { "source": "git-subdir", "url": "Yuan1z0825/nature-skills", "path": "skills" },
-      "skills": ["./nature-figure"]
+      "description": "Nature Skills: manuscript figures (nature-shared references included)",
+      "source": "./plugins/nature-figure"
     }
   ]
 }

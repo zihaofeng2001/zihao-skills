@@ -1,21 +1,32 @@
 # zihao-skills
 
-A personal Claude Code plugin marketplace that wraps skill repos which don't ship
-their own `.claude-plugin/marketplace.json`. Each entry points at the upstream repo
-with no pinned version, so installs track upstream commits.
+A personal Claude plugin marketplace that mirrors skills from repos which don't
+ship their own `.claude-plugin/marketplace.json`.
 
-| Plugin | Upstream | Skill loaded |
+The plugin files live in this repo (`plugins/`), because claude.ai's
+**Customize > Plugins** installs plugins packaged inside the marketplace repo.
+A GitHub Action (`.github/workflows/sync-upstream.yml`) runs
+`scripts/sync-upstream.sh` daily and commits any upstream changes.
+
+| Plugin | Upstream | Skills |
 |---|---|---|
-| `apple-design` | [emilkowalski/skills](https://github.com/emilkowalski/skills) `skills/apple-design` | apple-design |
-| `nature-figure` | [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills) `skills/` | nature-figure only (nature-shared files are fetched alongside for its `../nature-shared/` references) |
+| `apple-design` | [emilkowalski/skills](https://github.com/emilkowalski/skills) (MIT) | apple-design |
+| `nature-figure` | [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills) (Apache-2.0) | nature-figure, nature-shared (shared references it reads via `../nature-shared/`) |
 
 ## Install
 
-```bash
-claude plugin marketplace add zihaofeng2001/zihao-skills
-claude plugin install apple-design@zihao-skills
-claude plugin install nature-figure@zihao-skills
-```
+- Claude desktop / claude.ai: **Customize > Plugins > Add > Add marketplace**, enter
+  `zihaofeng2001/zihao-skills`, then add the plugins. Turn on **Sync automatically**.
+- Claude Code CLI:
 
-Auto-update is off by default for third-party marketplaces. Turn it on in
-`/plugin` → Marketplaces → zihao-skills → Enable auto-update.
+  ```bash
+  claude plugin marketplace add zihaofeng2001/zihao-skills
+  claude plugin install apple-design@zihao-skills
+  claude plugin install nature-figure@zihao-skills
+  ```
+
+## Add another skill
+
+Add a line to `MAPPINGS` in `scripts/sync-upstream.sh`, run it, add a
+`plugins/<name>/.claude-plugin/plugin.json`, and list the plugin in
+`.claude-plugin/marketplace.json`.

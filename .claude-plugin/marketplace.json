@@ -12,6 +12,11 @@
       "name": "nature-figure",
       "description": "Nature Skills: manuscript figures (nature-shared references included)",
       "source": "./plugins/nature-figure"
+    },
+    {
+      "name": "anti-defensive-writing",
+      "description": "Anti-Defensive Writing: academic writing around the paper's strongest contribution (English skill)",
+      "source": "./plugins/anti-defensive-writing"
     }
   ]
 }

@@ -11,6 +11,8 @@ MAPPINGS=(
   "Yuan1z0825/nature-skills|skills/nature-figure|nature-figure/skills/nature-figure"
   "Yuan1z0825/nature-skills|skills/nature-shared|nature-figure/skills/nature-shared"
   "Yuan1z0825/nature-skills|LICENSE|nature-figure/LICENSE"
+  "Adkid-Zephyr/anti-defensive-writing-Skill|skills/anti-defensive-writing-en|anti-defensive-writing/skills/anti-defensive-writing-en"
+  "Adkid-Zephyr/anti-defensive-writing-Skill|LICENSE|anti-defensive-writing/LICENSE"
 )
 
 for m in "${MAPPINGS[@]}"; do

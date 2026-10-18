@@ -13,6 +13,7 @@ A GitHub Action (`.github/workflows/sync-upstream.yml`) runs
 | `apple-design` | [emilkowalski/skills](https://github.com/emilkowalski/skills) (MIT) | apple-design |
 | `nature-figure` | [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills) (Apache-2.0) | nature-figure, nature-shared (shared references it reads via `../nature-shared/`) |
 | `anti-defensive-writing` | [Adkid-Zephyr/anti-defensive-writing-Skill](https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill) (MIT) | anti-defensive-writing-en (English version only) |
+| `no-ai-slop` | [petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop) (MIT) | no-ai-slop |
 
 ## Install
 
@@ -25,6 +26,7 @@ A GitHub Action (`.github/workflows/sync-upstream.yml`) runs
   claude plugin install apple-design@zihao-skills
   claude plugin install nature-figure@zihao-skills
   claude plugin install anti-defensive-writing@zihao-skills
+  claude plugin install no-ai-slop@zihao-skills
   ```
 
 ## Add another skill

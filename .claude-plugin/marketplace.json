@@ -17,6 +17,11 @@
       "name": "anti-defensive-writing",
       "description": "Anti-Defensive Writing: academic writing around the paper's strongest contribution (English skill)",
       "source": "./plugins/anti-defensive-writing"
+    },
+    {
+      "name": "no-ai-slop",
+      "description": "No AI Slop: edit drafts into sharper, more human writing, or detect AI-slop patterns",
+      "source": "./plugins/no-ai-slop"
     }
   ]
 }
